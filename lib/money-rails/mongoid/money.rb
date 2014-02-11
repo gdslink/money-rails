@@ -17,7 +17,7 @@ class Money
         object = object.symbolize_keys
         object.has_key?(:cents) ? ::Money.new(object[:cents], object[:currency_iso]) : nil
       else
-        nil
+        object
       end
     end
 
